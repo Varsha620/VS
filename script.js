@@ -115,3 +115,4 @@ let backtotop = select('.back-to-top')
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+

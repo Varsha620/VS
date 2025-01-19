@@ -474,7 +474,7 @@ Header
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#resume{
+.resume-btn{
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
@@ -489,7 +489,7 @@ Header
   background: #5f021f;
 }
 
-#abt-me button:hover{
+#abt-me a:hover{
   background: #d00243;
 }
 
