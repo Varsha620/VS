@@ -1,0 +1,169 @@
+<!DOCTYPE html >
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="assets" rel="icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script>
+    AOS.init();
+  </script>
+
+  <title>Portfolio</title>
+</head>
+<body>
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Varsz</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="#hero">Home</a></li>
+          <li><a href="#abt-me">About</a></li>
+          <li><a href="#skills">Tools</a></li>
+          <li><a href="#projects">Works</a></li>
+          <li><a href="#offer-section">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </header>
+
+    <section id="hero" class="d-flex align-items-center">
+      <canvas></canvas>
+      <div class="container mask d-flex flex-column align-items-center" style="background-color: rgba(255, 255, 255, 0.745);" data-aos="zoom-in" data-aos-delay="100">
+        <span class="head">HELLO THERE! I'M</span>
+        <h1 class="name">VARSHA SABU</h1>
+        <span class="designation">Web Designer</span>
+        <div class="header-social-links">
+          <a href="https://github.com/Varsha620/" class="github"><i class="bi bi-github"></i></i></a>
+          <a href="https://www.instagram.com/varsha_vsmt/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/varsha-sabu-663225255/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+        </div> 
+    </section>
+
+    
+    <section id="abt-me">
+        <img src="css/assets/Web_Photo_Editor.png">
+        <div class="container mask d-flex flex-column align-items-center" style="background-color: rgb(255, 255, 255);;" data-aos-delay="100">
+          <span class="abt" style="font-size: 55px;font-family: Extenda-50;letter-spacing: 2.5px;">ABOUT ME</span>
+          <p id="desc">As a passionate freelance web designer, I would love to bring your vision to life with innovative designs and intuitive user experiences. Currently specializing in modern aesthetics and responsive layouts, I craft websites that captivate audiences and elevate brands. Together let's transform your digital presence.</p>
+          <button id="resume">Resume</button>
+        </div>
+    </section>
+
+    <section id="skills">
+      <span id="head">FAMILIAR TOOLS</span>
+      <div class="tools">
+        <div class="progress-circle" data-percent="95">
+          <div class="circle">
+            <div class="inner-circle"></div>
+          </div>
+          <p>HTML5</p>
+        </div>
+        <div class="progress-circle" data-percent="90">
+          <div class="circle">
+            <div class="inner-circle"></div>
+          </div>
+          <p>CSS3</p>
+        </div>
+        <div class="progress-circle" data-percent="75">
+          <div class="circle">
+            <div class="inner-circle"></div>
+          </div>
+          <p>JavaScript</p>
+        </div>
+        <div class="progress-circle" data-percent="85">
+          <div class="circle">
+            <div class="inner-circle"></div>
+          </div>
+          <p>Bootstrap</p>
+        </div>
+        <div class="progress-circle" data-percent="70">
+          <div class="circle">
+            <div class="inner-circle"></div>
+          </div>
+          <p>React</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="side-text">RECENT WORKS</div>
+      <div class="project-links">
+        <div class="proj">
+        <img src="css/assets/StarWatch.png" alt="The Kiosk">
+        <div class="overlay">
+          <h3>01.</h3>
+          <a href= "https://varsha620.github.io/StarWatch/">STARWATCH</a>
+        </div>
+      </div>
+        <div class="proj">
+          <img src="css/assets/Coffee.png" alt="The Kiosk">
+          <div class="overlay">
+            <h3>02.</h3>
+            <a href= "https://varsha620.github.io/CoffeeBusiness/">NESTLE(sample)</a>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="css/assets/Login.png" alt="The Kiosk">
+          <div class="overlay">
+            <h3>03.</h3>
+            <a href= "https://varsha620.github.io/Loginpg/">LOGIN</a>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="css/assets/Food ordering.png" alt="The Kiosk">
+          <div class="overlay">
+            <h3>04.</h3>
+            <a href= "https://varsha620.github.io/FoodOrdering/">FOOD ORDERING(made for hackathon)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="offer-section" class="offer-section">
+      <div class="offer">
+        <div class="offer-content">
+          <h2 style="text-align: center; font-family: Extenda-50;font-size: 50px;letter-spacing: 2px;">CONTACT</h2>
+          <div class="row">
+            <div class="email col-lg-6 text-center">
+              <i class="bi bi-envelope"></i>
+              <p>vars9815@gmail.com</p>
+            </div>
+            
+            <div class="phone col-lg-6 text-center">
+              <i class="bi bi-phone"></i>
+              <p>+91 79945 39966</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Varsha</span></strong>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://www.linkedin.com/in/varsha-sabu-663225255/">Varsz</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="preloader"></div>
+    <a href="#home" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
