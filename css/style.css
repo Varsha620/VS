@@ -429,29 +429,29 @@ Header
 
   #hero h1 {
     font-size: 28px;
-    line-height: 36px;
+    line-height: 90px;
   }
 
   #hero h2 {
     font-size: 18px;
-    line-height: 24px;
+    line-height: 54px;
   }
 }
 
 
 
 
-/*------------------------------------------About----------------------------*/
-
-
-#abt-me{
+#abt-me {
   background-color: #600321;
-  width: 100%;
-  height: 405px;
-  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  position: relative;
 }
 
-#abt-me img{
+#abt-me img {
   position: absolute;
   height: 497px;
   width: 697px;
@@ -461,20 +461,19 @@ Header
 }
 
 #abt-me .container {
-  padding: 50px; /* Optional: Adjust padding for the content inside the container */
   position: relative;
   top: 59px;
   left: 200px;
-  border: 20px solid#f2ecaf;
+  border: 20px solid #f2ecaf;
   width: 1000px;
   height: 70vh;
-  z-index: 3;
   line-height: 2;
   font-size: 18px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: white;
+  z-index: 3;
 }
 
-.resume-btn{
+.resume-btn {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
@@ -483,56 +482,44 @@ Header
   display: inline-block;
   padding: 12px 40px;
   border-radius: 5px;
-  transition: 0.5s;
-  margin-top: 30px;
   color: #fff;
   background: #5f021f;
+  margin-top: 30px;
+  transition: 0.5s;
 }
 
-#abt-me a:hover{
+.resume-btn:hover {
   background: #d00243;
 }
 
-/*-----------------------------------------------------------
-Skills
-------------------------------------------------------------*/
-
+/* Skills Section */
 #skills {
+  background-color: #efecca;
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  overflow-x: auto;
-  background-color: #f2ecaf;
   flex-direction: column;
-  position: relative;
-  align-items: center;
-  height: 80vh;
+  justify-content: center;
+  padding: 50px;
+  margin-top: 20px;
+  order: 3;
 }
 
 #head {
-  font-size: 55px;
-  position: absolute;
-  margin: 0;
-  top: 45px;
-  left: 85px;
-  font-family: Extenda-50;
-  letter-spacing: 2.5px;
+  font-size: 50px;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 .tools {
   display: flex;
-  gap: 60px; /* Spacing between circles */
-  margin-top: 100px;
-  margin-bottom: 50px;
-  background-color: #fffdfd;
-  padding: 50px;
-  margin-left: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 .progress-circle {
+  width: 120px;
+  height: 120px;
   position: relative;
-  width: 150px;
-  height: 150px;
   text-align: center;
   font-family: Arial, sans-serif;
 }
@@ -541,14 +528,10 @@ Skills
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: conic-gradient(
-    #600321 0deg, /* Start with an empty fill */
-    #ccc 0deg
-  );
+  background: conic-gradient(#600321 0deg, #ccc 0deg);
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fillCircle 2s ease-out forwards; /* Smooth filling animation */
 }
 
 .progress-circle .inner-circle {
@@ -563,24 +546,71 @@ Skills
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
-  pointer-events: none;
 }
 
-
-@keyframes fillCircle {
-  0% {
-    background: conic-gradient(
-      #600321 0deg,
-      #ccc 0deg
-    );
+/* Media Queries */
+@media (max-width: 1400px) {
+  #abt-me {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
-  100% {
-    background: conic-gradient(
-      #600321 calc(var(--percent) * 3.6deg), /* End at the specified percentage */
-      #ccc calc(var(--percent) * 3.6deg)
-    );
+
+  #abt-me img {
+    position: relative;
+    margin: 0 auto 20px auto;
+  }
+
+  #abt-me .container {
+    left: 0;
+    top: 0;
+    width: auto;
+    padding: 20px;
+    border: none;
+    text-align: center;
+  }
+
+  #skills {
+    margin-top: 40px;
+  }
+
+  .tools {
+    gap: 20px;
+  }
+
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .progress-circle p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  #abt-me {
+    padding: 10px;
+  }
+
+  #abt-me .container {
+    padding: 10px;
+  }
+
+  .resume-btn {
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .progress-circle p {
+    font-size: 12px;
   }
 }
 
