@@ -439,33 +439,35 @@ Header
 }
 
 
-
+/*----------------------
+About
+-------------------------*/
 
 #abt-me {
   background-color: #600321;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   padding: 50px;
-  position: relative;
+  height: 432px; 
+  margin-bottom: -20px;
 }
 
 #abt-me img {
   position: absolute;
-  height: 497px;
-  width: 697px;
-  margin-top: -92px;
-  margin-left: 20px;
+  height: 510px;
+  width: auto;
+  margin-top: -79px;
+  margin-left: -20px;
   z-index: 10;
 }
 
 #abt-me .container {
   position: relative;
-  top: 59px;
-  left: 200px;
+  top: 63px;
+  left: 230px;
   border: 20px solid #f2ecaf;
-  width: 1000px;
+  width: 900px;
   height: 70vh;
   line-height: 2;
   font-size: 18px;
@@ -492,6 +494,36 @@ Header
   background: #d00243;
 }
 
+@media (max-width: 1400px) {
+  #abt-me {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: auto; /* Allow the height to adjust dynamically */
+  }
+
+  #abt-me img {
+    position: relative;
+    margin: 0 auto 20px auto;
+    height: auto;
+    width: 100%; /* Ensure it scales with the screen */
+  }
+
+  #abt-me .container {
+    left: 0;
+    top: 0;
+    width: 90%; /* Adjust width to fit smaller screens */
+    padding: 20px;
+    border: 5px solid #f2ecaf;
+    text-align: center;
+  }
+
+  #skills {
+    margin-top: 40px;
+    padding: 20px;
+  }
+}
+
 /* Skills Section */
 #skills {
   background-color: #efecca;
@@ -500,13 +532,21 @@ Header
   justify-content: center;
   padding: 50px;
   margin-top: 20px;
+  height: 60vh;
   order: 3;
 }
 
 #head {
-  font-size: 50px;
+  font-size: 70px;
   margin-bottom: 30px;
+  margin-top: 0px;
   text-align: left;
+  letter-spacing: 2px;
+  font-family: Extenda-50;
+}
+
+#skills .row{
+  margin-left: 100px;
 }
 
 .tools {
@@ -517,21 +557,23 @@ Header
 }
 
 .progress-circle {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   position: relative;
   text-align: center;
   font-family: Arial, sans-serif;
+  transition: all 1.5s ease-in-out; /* Add smooth transition */
 }
 
 .progress-circle .circle {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: conic-gradient(#600321 0deg, #ccc 0deg);
+  background: conic-gradient(#ccc 0deg, #ccc 360deg); /* Default state */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background 1.5s ease; /* Smooth animation */
 }
 
 .progress-circle .inner-circle {
@@ -550,63 +592,61 @@ Header
   font-weight: bold;
 }
 
+
+
 /* Media Queries */
 @media (max-width: 1400px) {
   #abt-me {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    height: auto; /* Allow it to grow dynamically */
   }
 
   #abt-me img {
     position: relative;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
+    height: auto;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 100%; /* Full-width image */
+    display: block;
   }
 
   #abt-me .container {
-    left: 0;
-    top: 0;
-    width: auto;
-    padding: 20px;
-    border: none;
+    width: 95%; /* Almost full screen */
+    padding: 10px;
+    border: none; /* Simplify the border for mobile */
     text-align: center;
+    height: auto; /* Allow the height to adjust dynamically */
+  }
+
+  .resume-btn {
+    padding: 8px 16px; /* Compact buttons */
+    font-size: 12px;
   }
 
   #skills {
-    margin-top: 40px;
+    padding: 15px;
+    margin-top: 20px;
   }
 
   .tools {
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center;
+  }
+
+  #head {
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: Extenda-50;
   }
 
   .progress-circle {
     width: 100px;
     height: 100px;
-  }
-
-  .progress-circle p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 576px) {
-  #abt-me {
-    padding: 10px;
-  }
-
-  #abt-me .container {
-    padding: 10px;
-  }
-
-  .resume-btn {
-    padding: 10px 20px;
-    font-size: 10px;
-  }
-
-  .progress-circle {
-    width: 80px;
-    height: 80px;
   }
 
   .progress-circle p {
@@ -745,9 +785,10 @@ Contact Us
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
   border-radius: 10px;
   max-width: 500px;
-  margin: 110px;
-  margin-left: 135px;
+  margin: auto; /* Center the content horizontally */
   text-align: left;
+  top: 50%;
+  transform: translateY(-50%); /* Center the content vertically */
 }
 
 .offer-content h2 {
