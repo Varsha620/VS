@@ -84,30 +84,18 @@
       });
     })
 
-//Skill section
-document.addEventListener('DOMContentLoaded', () => {
-  let skillsContent = document.querySelector('#skills');
-  if (skillsContent) {
-    new Waypoint({
-      element: skillsContent,
-      offset: '80%',
-      handler: function () {
-        let circles = document.querySelectorAll('.progress-circle');
-        circles.forEach((circle) => {
-          let percent = circle.getAttribute('data-percent');
-          let degree = percent * 3.6; // Convert percentage to degrees
-          let progressCircle = circle.querySelector('.circle');
-          progressCircle.style.background = `conic-gradient(#600321 0deg, #600321 ${degree}deg, #ccc ${degree}deg, #ccc 360deg)`;
-        });
-      },
+    
+//Skill
+    document.addEventListener('DOMContentLoaded', () => {
+      const circles = document.querySelectorAll('.progress-circle');
+      
+      circles.forEach(circle => {
+        const percent = circle.getAttribute('data-percent'); // Get percentage
+        const progress = percent; // Use percentage directly as progress
+        circle.querySelector('.circle').style.setProperty('--progress', progress);
+      });
     });
-  }
-});
-
-
-
-
-
+    
 
 
 //Back to top button
