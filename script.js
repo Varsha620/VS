@@ -1,4 +1,4 @@
-    document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener('DOMContentLoaded', () => {
       // Setup canvas
       const canvas = document.querySelector('canvas');
       const ctx = canvas.getContext('2d');
@@ -84,7 +84,7 @@
       });
     })
 
-    
+
 //Skill
     document.addEventListener('DOMContentLoaded', () => {
       const circles = document.querySelectorAll('.progress-circle');
